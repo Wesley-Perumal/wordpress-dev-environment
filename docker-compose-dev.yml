@@ -16,9 +16,9 @@ services:
    mysql:
     image: mysql
     ports: 
-      - ${MYSQL_PORT}:3306
+      - 3306:3306
     environment: 
-      MYSQL_ROOT_PASSWORD: example
+      MYSQL_ROOT_PASSWORD: ${MYSQLPASS}
    mailhog:
     image: mailhog/mailhog
     ports:
@@ -33,3 +33,5 @@ services:
       PMA_PORT: ${PMA_PORT}
       PMA_USER: ${PMA_USER}
       PMA_PASSWORD: ${PMA_PASSWORD}
+
+    
